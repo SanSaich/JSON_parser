@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>JSON to HTML</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__columns columns">
+                    <div class="column__left">
+                        <label for="jsonfile" class="column__input-label">Выберите файлы</label>
+                        <input type="file" id="jsonfile" accept=".js" class="column__input" onchange="uploadFile(this)">
+                    </div>
+                    <div class="column__right">
+                        <input type="button" value="Reset" class="column__input-reset">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page__container container">
+                <span>12345678</span>
+            </div>
+        </main>
+    <script src="/app.js"></script>
+</body>
+</html>
