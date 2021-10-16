@@ -16,8 +16,11 @@ async function uploadFile(input) {
 
 const forObj = (obj) => {
   Object.entries(obj).forEach(([key, value]) => {
-    if (Array.isArray(value)) {
+    if (typeof obj[key] === "object" && Array.isArray(value)) {
       console.log("Массив:", key);
+      forObj(value);
+    } else if (typeof obj[key] === "object" && !Array.isArray(value)) {
+      console.log("Объект:", key);
       forObj(value);
     } else {
       console.log("Ключ:", key, "Значение:", value);
