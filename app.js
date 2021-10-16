@@ -3,7 +3,7 @@ const buttonReset = document.querySelector(".column__input-reset");
 buttonReset.addEventListener("click", () => resetPage(""));
 
 function resetPage(code) {
-  document.querySelector(".page__container").innerHTML = `${code}`;
+  document.querySelector(".main-block__body").innerHTML = `${code}`;
 }
 
 async function uploadFile(input) {

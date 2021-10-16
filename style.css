@@ -1,148 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: black;
-  }
-  
-  ul,
-  ol,
-  li {
-    list-style: none;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: inherit;
-    font-size: inherit;
-  }
-  
-  img {
-    vertical-align: top;
-  }
-  
-  body {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: black;
-  }
-  
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    overflow: hidden;
-  }
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
-  .header {
-  }
-  
-  .header__container {
-    display: flex;
-    height: 100px;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-  }
+a {
+  text-decoration: none;
+}
 
-  .container {
-    max-width: 1146px;
-    margin: 0px auto;
-  }
- 
-  .header__columns {
-  }
-  
-  .columns {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: row;
-      flex: 1 1 100%;
-  }
-  
-  .column__left {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 0 1 50%;
-  }
+a:hover {
+  color: black;
+}
 
-  .column__input-label {
-    /* padding-right: 30px; */
-    width: 250px;
-    height: 50px;
-    border-radius: 25px;
-    text-align: center;
-    margin: 25px;
-    cursor: pointer;
-    font: 20px/45px Ubuntu;
-    transition: all 0.18s ease-in-out;
-    border: 1px solid #4FD666;
-    background: linear-gradient(to top right, #3EC97A, #69EA49 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0)) top right/500% 500%;
-    color: #4FD666;
-  }
+ul,
+ol,
+li {
+  list-style: none;
+}
 
-  .column__input-label:hover {
-    color: white;
-    background-position: bottom left;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
 
-  .column__input {
-    /* width: 0.1px;
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.header {
+}
+
+.header__container {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1146px;
+  margin: 0px auto;
+}
+
+.header__columns {
+}
+
+.columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex: 1 1 100%;
+}
+
+.column__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 50%;
+}
+
+.column__input-label {
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 25px;
+  cursor: pointer;
+  font: 20px/45px Ubuntu;
+  transition: all 0.18s ease-in-out;
+  border: 1px solid #4fd666;
+  background: linear-gradient(
+      to top right,
+      #3ec97a,
+      #69ea49 20%,
+      rgba(255, 255, 255, 0) 80%,
+      rgba(255, 255, 255, 0)
+    )
+    top right/500% 500%;
+  color: #4fd666;
+}
+
+.column__input-label:hover {
+  color: white;
+  background-position: bottom left;
+}
+
+.column__input {
+  /* width: 0.1px;
   height: 0.1px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
   z-index: -1; */
   display: none;
-  }
-  
-  .column__right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    flex: 0 1 50%;
-  }
-  
-  .column__input-reset {
-    height: 50px;
-    width: 250px;
-    border-radius: 25px;
-    text-align: center;
-    margin: 25px;
-    cursor: pointer;
-    font: 20px/45px Ubuntu;
-    transition: all 0.18s ease-in-out;
-    border: 1px solid #4FD666;
-    background: linear-gradient(to top right, #3EC97A, #69EA49 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0)) top right/500% 500%;
-    color: #4FD666;
-  }
+}
 
-  .column__input-reset:hover {
-    color: white;
-    background-position: bottom left;
-  }
+.column__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 50%;
+}
 
-  .page {
-  }
-  
-  .page__container {
-  }
-  
+.column__input-reset {
+  height: 50px;
+  width: 250px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 25px;
+  cursor: pointer;
+  font: 20px/45px Ubuntu;
+  transition: all 0.18s ease-in-out;
+  border: 1px solid #4fd666;
+  background: linear-gradient(
+      to top right,
+      #3ec97a,
+      #69ea49 20%,
+      rgba(255, 255, 255, 0) 80%,
+      rgba(255, 255, 255, 0)
+    )
+    top right/500% 500%;
+  color: #4fd666;
+}
+
+.column__input-reset:hover {
+  color: white;
+  background-position: bottom left;
+}
+
+.page {
+}
+.page__main-block {
+  min-height: 100%;
+}
+.main-block {
+}
+.main-block__container {
+}
+.container {
+}
+.main-block__body {
+  margin: 25px;
+  padding: 25px;
+  border: 1px solid #4fd666;
+  border-radius: 25px;
+  font: 20px/45px Ubuntu;
+}
