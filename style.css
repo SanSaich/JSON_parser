@@ -3,7 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  border: 0;
+  /* border: 0; */
   box-sizing: border-box;
 }
 
@@ -170,4 +170,8 @@ body {
   border: 1px solid #4fd666;
   border-radius: 25px;
   font: 20px/45px Ubuntu;
+}
+
+.main-block__body div {
+  margin-left: 25px;
 }
