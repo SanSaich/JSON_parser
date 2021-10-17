@@ -173,5 +173,28 @@ body {
 }
 
 .main-block__body div {
-  margin-left: 25px;
+  /* margin-left: 25px; */
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 32px/45px Ubuntu;
+}
+
+.fields div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex: 1 1 100%;
+  margin: 10px 100px;
+}
+
+.fields input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 1 50%;
 }
