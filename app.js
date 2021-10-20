@@ -28,7 +28,7 @@ const forObj = (obj) => {
       createDivClass(key, directory);
       directory = document.querySelector(`.${key}`);
       Object.entries(value).forEach(([key, value]) => {
-        key = "column" + key;
+        key = "columnFields" + key;
         createDivClass(key, directory);
         createField(key, value);
       });
@@ -36,10 +36,9 @@ const forObj = (obj) => {
       createDivClass(key, directory);
       directory = document.querySelector(`.${key}`);
       Object.entries(value).forEach(([key, value]) => {
-        key = "column" + key;
+        key = "columnRef" + key;
         createDivClass(key, directory);
-        // createField(key, value);
-        // console.log(key, directory);
+        createreferences(key, value);
       });
     }
   });
@@ -70,7 +69,6 @@ const createField = (key, value) => {
           // });
         } else if (key === "technologies") {
           Object.values(value).forEach((value) => {
-            console.log(value);
             let elemOption = document.createElement("option");
             elemOption.innerHTML = `${value}`;
             elem.append(elemOption);
@@ -92,6 +90,32 @@ const createField = (key, value) => {
         }
       });
       // elem.removeAttribute("multiple");
+      directory.append(elem);
+    }
+  });
+};
+
+const createreferences = (key, value) => {
+  directory = document.querySelector(`.${key}`);
+  Object.entries(value).forEach(([key, value]) => {
+    if (key === "input") {
+      let elem = document.createElement(`${key}`);
+      elem.className = "references__input";
+      Object.entries(value).forEach(([key, value]) => {
+        elem.setAttribute(`${key}`, `${value}`);
+      });
+      directory.append(elem);
+    } else if (key === "text without ref") {
+      console.log(key, value);
+      let elem = (document.innerHTML = `${value} `);
+      directory.append(elem);
+    } else if (key === "text") {
+      console.log(key, value);
+      let elem = (document.innerHTML = `${value} `);
+      directory.append(elem);
+    } else if (key === "ref") {
+      console.log(key, value);
+      let elem = (document.insertAdjacentHTML = `${value} `);
       directory.append(elem);
     }
   });

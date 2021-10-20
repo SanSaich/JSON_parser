@@ -200,3 +200,28 @@ body {
   flex: 0 1 50%;
   color: inherit;
 }
+
+.references {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex: 1 1 100%;
+  margin: 10px 100px;
+}
+
+.references div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* flex-direction: row; */
+  flex: 0 1 50%;
+  margin: 10px 100px;
+}
+
+.references input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: inherit;
+}
