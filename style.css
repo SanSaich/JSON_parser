@@ -75,6 +75,7 @@ body {
   justify-content: space-between;
   flex-direction: row;
   flex: 1 1 100%;
+  margin-top: 25px;
 }
 
 .column__left {
@@ -93,21 +94,14 @@ body {
   cursor: pointer;
   font: 20px/45px Ubuntu;
   transition: all 0.18s ease-in-out;
-  border: 1px solid #4fd666;
-  background: linear-gradient(
-      to top right,
-      #3ec97a,
-      #69ea49 20%,
-      rgba(255, 255, 255, 0) 80%,
-      rgba(255, 255, 255, 0)
-    )
-    top right/500% 500%;
-  color: #4fd666;
+  border: 2px solid #222222;
+  background: white;
+  color: black;
 }
 
 .column__input-label:hover {
   color: white;
-  background-position: bottom left;
+  background: #222222;
 }
 
 .column__input {
@@ -136,21 +130,14 @@ body {
   cursor: pointer;
   font: 20px/45px Ubuntu;
   transition: all 0.18s ease-in-out;
-  border: 1px solid #4fd666;
-  background: linear-gradient(
-      to top right,
-      #3ec97a,
-      #69ea49 20%,
-      rgba(255, 255, 255, 0) 80%,
-      rgba(255, 255, 255, 0)
-    )
-    top right/500% 500%;
-  color: #4fd666;
+  border: 2px solid #222222;
+  background: white;
+  color: black;
 }
 
 .column__input-reset:hover {
+  background: #222222;
   color: white;
-  background-position: bottom left;
 }
 
 .page {
@@ -167,13 +154,13 @@ body {
 .main-block__body {
   margin: 25px;
   padding: 25px;
-  border: 1px solid #4fd666;
+  border: 2px solid #222222;
   border-radius: 25px;
   font: 20px/45px Ubuntu;
+  color: #222222;
 }
 
 .main-block__body div {
-  /* margin-left: 25px; */
 }
 
 .name {
@@ -181,6 +168,8 @@ body {
   align-items: center;
   justify-content: center;
   font: 32px/45px Ubuntu;
+  padding-bottom: 15px;
+  color: #000000;
 }
 
 .fields div {
@@ -192,9 +181,22 @@ body {
   margin: 10px 100px;
 }
 
+.fields label {
+  cursor: pointer;
+}
+
 .fields input {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex: 0 1 50%;
+  color: inherit;
+}
+
+.fields select {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 1 50%;
+  color: inherit;
 }
