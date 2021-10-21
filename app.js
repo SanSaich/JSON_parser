@@ -38,7 +38,15 @@ const forObj = (obj) => {
       Object.entries(value).forEach(([key, value]) => {
         key = "columnRef" + key;
         createDivClass(key, directory);
-        createreferences(key, value);
+        createReferences(key, value);
+      });
+    } else if (key === "buttons") {
+      createDivClass(key, directory);
+      directory = document.querySelector(`.${key}`);
+      Object.entries(value).forEach(([key, value]) => {
+        key = "columnBtn" + key;
+        createDivClass(key, directory);
+        createButtons(key, value);
       });
     }
   });
@@ -73,6 +81,13 @@ const createField = (key, value) => {
             elemOption.innerHTML = `${value}`;
             elem.append(elemOption);
           });
+        } else if (value === "textarea") {
+          console.log(value);
+          elem = document.createElement("textarea");
+          console.log(elem);
+          elem.className = "form-control";
+          elem.setAttribute("id", `${idFor}`);
+          elem.setAttribute(`${key}`, `${value}`);
         }
         if (key === "filetype") {
           value = value.map((valueArr) => {
@@ -95,7 +110,7 @@ const createField = (key, value) => {
   });
 };
 
-const createreferences = (key, value) => {
+const createReferences = (key, value) => {
   directory = document.querySelector(`.${key}`);
   Object.entries(value).forEach(([key, value]) => {
     if (key === "input") {
@@ -118,6 +133,18 @@ const createreferences = (key, value) => {
       let elem = (document.insertAdjacentHTML = `${value} `);
       directory.append(elem);
     }
+  });
+};
+
+const createButtons = (key, value) => {
+  directory = document.querySelector(`.${key}`);
+  Object.entries(value).forEach(([key, value]) => {
+    console.log(key);
+    let elem = document.createElement("input");
+    elem.setAttribute(`type`, `button`);
+    elem.setAttribute(`value`, `${value}`);
+    elem.className = "column__input-reset";
+    directory.append(elem);
   });
 };
 

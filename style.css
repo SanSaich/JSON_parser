@@ -201,6 +201,14 @@ body {
   color: inherit;
 }
 
+.fields textarea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 1 50%;
+  color: inherit;
+}
+
 .references {
   display: flex;
   align-items: center;
@@ -230,4 +238,24 @@ body {
   justify-content: flex-start;
   align-items: center;
   color: inherit;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 10px 100px;
+}
+
+.buttons div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 1 50%;
+}
+
+.buttons input {
+  margin: 25px 0;
 }
