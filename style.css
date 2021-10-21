@@ -172,7 +172,7 @@ body {
   color: #000000;
 }
 
-.fields div {
+.fields > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -182,6 +182,11 @@ body {
 }
 
 .fields label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 1 50%;
+  color: inherit;
   cursor: pointer;
 }
 
@@ -258,4 +263,8 @@ body {
 
 .buttons input {
   margin: 25px 0;
+}
+
+.btn-group {
+  flex: 0 1 50%;
 }

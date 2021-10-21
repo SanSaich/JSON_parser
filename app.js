@@ -82,12 +82,26 @@ const createField = (key, value) => {
             elem.append(elemOption);
           });
         } else if (value === "textarea") {
-          console.log(value);
           elem = document.createElement("textarea");
-          console.log(elem);
           elem.className = "form-control";
           elem.setAttribute("id", `${idFor}`);
           elem.setAttribute(`${key}`, `${value}`);
+        } else if (key === "colors") {
+          elem = document.createElement("div");
+          elem.className = "btn-group";
+          Object.values(value).forEach((value) => {
+            let elemInput = document.createElement("input");
+            elemInput.setAttribute("type", "radio");
+            elemInput.setAttribute("name", "btnradio");
+            elemInput.setAttribute("id", value);
+            elemInput.className = "btn-check";
+            let elemLabel = document.createElement("label");
+            elemLabel.setAttribute("for", value);
+            elemLabel.className = "btn btn-lg btn-outline-secondary";
+            elemLabel.setAttribute("style", `color: ${value}`);
+            elemLabel.innerHTML = value;
+            elem.append(elemInput, elemLabel);
+          });
         }
         if (key === "filetype") {
           value = value.map((valueArr) => {
