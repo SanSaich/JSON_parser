@@ -227,7 +227,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* flex-direction: row; */
   flex: 0 1 10%;
   margin: 10px 100px;
   margin: 0;

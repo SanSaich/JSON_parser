@@ -68,18 +68,26 @@ const createField = (key, value) => {
       elem.className = "form-control form-control-lg";
       Object.entries(value).forEach(([key, value]) => {
         if (value === "technology") {
-          elem = document.createElement("select");
-          elem.setAttribute("id", `${idFor}`);
-          elem.setAttribute("aria-label", ".form-select-lg example");
-          elem.className = "form-select form-select-lg";
-          // $(function () {
-          //   $("select").selectpicker();
-          // });
+          elem = document.createElement("div");
+          // elem.setAttribute("id", `${idFor}`);
+          // elem.setAttribute("aria-label", ".form-select-lg example");
+          elem.className = "btn-group btn-group-sm";
         } else if (key === "technologies") {
           Object.values(value).forEach((value) => {
-            let elemOption = document.createElement("option");
-            elemOption.innerHTML = `${value}`;
-            elem.append(elemOption);
+            // let elemOption = document.createElement("option");
+            // elemOption.innerHTML = `${value}`;
+            // elem.append(elemOption);
+            let elemInput = document.createElement("input");
+            elemInput.setAttribute("type", "checkbox");
+            elemInput.setAttribute("name", "btnradio");
+            elemInput.setAttribute("id", value);
+            elemInput.className = "btn-check";
+            let elemLabel = document.createElement("label");
+            elemLabel.setAttribute("for", value);
+            elemLabel.className = "btn btn-lg btn-outline-secondary";
+            elemLabel.setAttribute("style", `color: ${value}`);
+            elemLabel.innerHTML = value;
+            elem.append(elemInput, elemLabel);
           });
         } else if (value === "textarea") {
           elem = document.createElement("textarea");
@@ -102,6 +110,9 @@ const createField = (key, value) => {
             elemLabel.innerHTML = value;
             elem.append(elemInput, elemLabel);
           });
+        }
+        if (value === "checkbox") {
+          elem.className = " ";
         }
         if (key === "filetype") {
           value = value.map((valueArr) => {
