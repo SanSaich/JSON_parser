@@ -11,8 +11,6 @@ function resetPage(code) {
 jsonfile.addEventListener("change", uploadFile);
 
 async function uploadFile() {
-  // let fileJson = await input.files[0].text();
-  //при добавлении import в js сломался  onchange="uploadFile(this)" в <import>
   let fileJson = await this.files[0].text();
   resetPage("");
   let objJson = JSON.parse(fileJson);
@@ -146,16 +144,18 @@ const createReferences = (key, value) => {
       });
       directory.append(elem);
     } else if (key === "text without ref") {
-      console.log(key, value);
-      let elem = (document.innerHTML = `${value} `);
+      let elem = document.createElement("span");
+      elem.innerHTML = `${value} `;
       directory.append(elem);
     } else if (key === "text") {
-      console.log(key, value);
-      let elem = (document.innerHTML = `${value} `);
+      let elem = document.createElement("a");
+      elem.setAttribute("href", "#");
+      elem.innerHTML = ` ${value}`;
       directory.append(elem);
     } else if (key === "ref") {
-      console.log(key, value);
-      let elem = (document.insertAdjacentHTML = `${value} `);
+      let elem = directory.querySelector("a");
+      elem.setAttribute("href", `/json/${value}.js`);
+
       directory.append(elem);
     }
   });
@@ -164,7 +164,6 @@ const createReferences = (key, value) => {
 const createButtons = (key, value) => {
   directory = document.querySelector(`.${key}`);
   Object.entries(value).forEach(([key, value]) => {
-    console.log(key);
     let elem = document.createElement("input");
     elem.setAttribute(`type`, `button`);
     elem.setAttribute(`value`, `${value}`);

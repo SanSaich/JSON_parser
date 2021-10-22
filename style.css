@@ -54,14 +54,13 @@ body {
 
 .header__container {
   display: flex;
-  height: 100px;
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
 }
 
-.container {
+.container-lg {
   max-width: 1146px;
   margin: 0px auto;
 }
@@ -90,7 +89,7 @@ body {
   height: 50px;
   border-radius: 25px;
   text-align: center;
-  margin: 25px;
+  /* margin: 0 25px; */
   cursor: pointer;
   font: 20px/45px Ubuntu;
   transition: all 0.18s ease-in-out;
@@ -126,7 +125,6 @@ body {
   width: 250px;
   border-radius: 25px;
   text-align: center;
-  margin: 25px;
   cursor: pointer;
   font: 20px/45px Ubuntu;
   transition: all 0.18s ease-in-out;
@@ -156,7 +154,7 @@ body {
   padding: 25px;
   border: 2px solid #222222;
   border-radius: 25px;
-  font: 20px/45px Ubuntu;
+  font: 20px/35px Ubuntu;
   color: #222222;
 }
 
@@ -188,6 +186,7 @@ body {
   flex: 0 1 50%;
   color: inherit;
   cursor: pointer;
+  text-align: center;
 }
 
 .fields input {
@@ -217,31 +216,41 @@ body {
 .references {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
   flex: 1 1 100%;
-  margin: 10px 100px;
+  margin-left: 100px;
 }
 
 .references div {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex: 0 1 10%;
-  margin: 10px 100px;
+  /* justify-content: flex-end; */
   margin: 0;
   margin-top: 25px;
 }
 
-.references div:last-child {
-  flex: 0 1 90%;
+.references div {
+  /* flex: 0 1 50%; */
 }
 
 .references input {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   align-items: center;
   color: inherit;
+  margin-top: 2px;
+}
+
+.references span {
+  text-align: center;
+  margin-right: 25px;
+}
+
+.references a {
+  text-decoration: none;
+  margin-right: 25px;
 }
 
 .buttons {
@@ -249,8 +258,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  margin: 10px 100px;
+  margin: 0 100px;
 }
 
 .buttons div {
@@ -266,4 +274,69 @@ body {
 
 .btn-group {
   flex: 0 1 50%;
+  height: 48px;
+}
+
+@media (max-width: 1199px) {
+  .fields > div {
+    flex-direction: column;
+  }
+  .fields label {
+    padding-bottom: 10px;
+  }
+  .btn-group {
+    width: 100%;
+  }
+  .references {
+    justify-content: center;
+    margin-left: 0;
+  }
+  .buttons {
+    justify-content: center;
+    margin: 0;
+  }
+  .buttons div {
+    flex: 0 1 auto;
+    margin: 0 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fields div {
+    margin: 25px 20px;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons div {
+    width: 94%;
+  }
+  .column__input-reset {
+    flex: 1 1 100%;
+  }
+  .columns {
+    flex-direction: column;
+  }
+  .column__left {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-group {
+    flex-wrap: wrap;
+  }
+  .main-block__body {
+    margin: 20px 5px;
+  }
+  .references div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .fields div {
+    margin: 20px 5px;
+  }
 }
